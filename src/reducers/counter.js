@@ -1,12 +1,6 @@
 import {INCREMENT, DECREMENT} from '../actions/counter';
 
-function increment(state) {
-    return state + 1;
-}
-
-function decrement(state) {
-    return state - 1;
-}
+import {increment, decrement} from './util/util';
 
 
 export default (state = 2, action) => {

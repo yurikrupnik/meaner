@@ -14,11 +14,8 @@ import App from './components/App';
 import ContentPage from './components/ContentPage';
 import NotFoundPage from './components/NotFoundPage';
 import ErrorPage from './components/ErrorPage';
+import Wrapper from './store/wrapper';
 
-//
-import {Provider} from 'react-redux';
-import store from './store/store';
-import DevTools from './components/DevTools/DevTools';
 
 const routes = [
     require('./routes/home'),
@@ -30,12 +27,7 @@ const routes = [
 const router = new Router(on => {
     on('*', async(state, next) => {
         const component = await next();
-        return component && <Provider store={store}>
-                <div>
-                    <App context={state.context}>{component}</App>
-                    <DevTools/>
-                </div>
-            </Provider>;
+        return component && <Wrapper state={state} component={component}/>;
     });
 
     routes.forEach(route => {

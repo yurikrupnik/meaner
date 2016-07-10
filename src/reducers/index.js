@@ -5,11 +5,11 @@ import counter from './counter';
 import counters from './counters';
 import {combineReducers} from 'redux';
 
-
-const Reducer = combineReducers({
+const reducers = {
     todos,
     counters,
     counter
-});
+};
 
-export default Reducer;
+export default combineReducers(reducers);
+

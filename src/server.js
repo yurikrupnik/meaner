@@ -72,7 +72,7 @@ server.use('/graphql', expressGraphQL(req => ({
     schema,
     graphiql: true,
     rootValue: {request: req},
-    pretty: process.env.NODE_ENV !== 'production',
+    pretty: process.env.NODE_ENV !== 'production'
 })));
 
 //
@@ -93,7 +93,7 @@ server.get('*', async(req, res, next) => {
             insertCss: styles => css.push(styles._getCss()),
             onSetTitle: value => (data.title = value),
             onSetMeta: (key, value) => (data[key] = value),
-            onPageNotFound: () => (statusCode = 404),
+            onPageNotFound: () => (statusCode = 404)
         };
 
         await Router.dispatch({path: req.path, query: req.query, context}, (state, component) => {
@@ -122,12 +122,12 @@ server.use((err, req, res, next) => { // eslint-disable-line no-unused-vars
     res.status(statusCode);
     res.send(template({
         message: err.message,
-        stack: process.env.NODE_ENV === 'production' ? '' : err.stack,
+        stack: process.env.NODE_ENV === 'production' ? '' : err.stack
     }));
 });
 
 
-server.use('/api/things', require('./api/thing'));
+// server.use('/api/things', require('./api/thing'));
 
 //
 // Launch the server

@@ -6,9 +6,7 @@ import DevTools from '../components/DevTools/DevTools';
 
 const logger = createLogger();
 
-const composed = compose(
+export default compose(
     applyMiddleware(thunk, promise, logger),
     DevTools.instrument()
 );
-
-export default composed;
