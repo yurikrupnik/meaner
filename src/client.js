@@ -77,13 +77,10 @@ function run() {
             path: location.pathname,
             query: location.query,
             state: location.state,
-            context,
+            context
         });
         render(currentState);
     });
-    // debugger;
-    // window.devToolsExtension(Reducer);
-    // console.log('window.devToolsExtension', window.devToolsExtension);
 
     // Save the page scroll position into the current location's state
     const supportPageOffset = window.pageXOffset !== undefined;
