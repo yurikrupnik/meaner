@@ -24,8 +24,9 @@ import assets from './assets';
 import {port, auth, analytics} from './config';
 const server = global.server = express();
 
-const url = '/api/payments';
+// todo make it functianal
 import router from './api/payment';
+const url = '/api/payments';
 server.use(url, router);
 //
 // Tell any CSS tooling (such as Material UI) to use all vendor prefixes if the
@@ -41,11 +42,6 @@ server.use(express.static(path.join(__dirname, 'public')));
 server.use(cookieParser());
 server.use(bodyParser.urlencoded({extended: true}));
 server.use(bodyParser.json());
-
-
-
-
-
 
 //
 // Authentication
