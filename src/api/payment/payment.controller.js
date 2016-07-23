@@ -16,7 +16,6 @@ function handleError(res, statusCode) {
 }
 
 function respondWithResult(res, statusCode) {
-
     statusCode = statusCode || 200;
     return function (entity) {
         if (entity) {
@@ -29,7 +28,6 @@ function respondWithResult(res, statusCode) {
 // Gets a list Count
 export function count(req, res) {
     return Payment.find().count().exec()
-        // .then(response => response)
         .then(respondWithResult(res))
         .catch(handleError(res));
 }
@@ -52,11 +50,6 @@ export function show(req, res) {
     }
 
     return Payment.find({}).exec()
-        // .then(function (response) {
-        //     return {
-        //         data: response
-        //     };
-        // })
         .then(respondWithResult(res))
         .catch(handleError(res));
 }

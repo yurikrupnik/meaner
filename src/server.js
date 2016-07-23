@@ -22,9 +22,11 @@ import schema from './data/schema';
 import Router from './routes';
 import assets from './assets';
 import {port, auth, analytics} from './config';
-
 const server = global.server = express();
 
+const url = '/api/payments';
+import router from './api/payment';
+server.use(url, router);
 //
 // Tell any CSS tooling (such as Material UI) to use all vendor prefixes if the
 // user agent is not known.
@@ -39,6 +41,11 @@ server.use(express.static(path.join(__dirname, 'public')));
 server.use(cookieParser());
 server.use(bodyParser.urlencoded({extended: true}));
 server.use(bodyParser.json());
+
+
+
+
+
 
 //
 // Authentication
