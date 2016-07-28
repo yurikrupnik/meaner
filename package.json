@@ -31,7 +31,7 @@
     "passport-facebook": "2.1.0",
     "pg": "4.5.1",
     "pretty-error": "2.0.0",
-    "react": "0.14.7",
+    "react": "^15.2.1",
     "react-dom": "0.14.7",
     "react-redux": "^4.4.5",
     "react-routing": "0.0.7",
