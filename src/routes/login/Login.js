@@ -49,5 +49,4 @@ class Login extends Component {
 }
 
 
-// export default withStyles(Login, s);
-export default connect(getCounter, dispatchActions)(Login);
+export default connect(getCounter, dispatchActions)(withStyles(Login, s));

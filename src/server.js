@@ -22,9 +22,12 @@ import schema from './data/schema';
 import Router from './routes';
 import assets from './assets';
 import {port, auth, analytics} from './config';
-
 const server = global.server = express();
 
+// todo make it functianal
+import router from './api/payment';
+const url = '/api/payments';
+server.use(url, router);
 //
 // Tell any CSS tooling (such as Material UI) to use all vendor prefixes if the
 // user agent is not known.

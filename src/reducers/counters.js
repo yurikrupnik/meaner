@@ -6,7 +6,7 @@ export default (state = [12, 11, 122], action) => {
 
     switch (type) {
         case ADD_COUNTER:
-            return [...state, 0];
+            return [...state, 50];
         case REMOVE_COUNTER:
             return removeByIndex(state, index);
 
