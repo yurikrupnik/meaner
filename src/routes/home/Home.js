@@ -16,7 +16,7 @@ function Home({ news }) {
     <div className={s.root}>
       <div className={s.container}>
         <h1 className={s.title}>React.js News</h1>
-        
+
       </div>
     </div>
   );

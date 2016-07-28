@@ -11,7 +11,7 @@ class FakeDataWithIndex {
     }
 }
 
-export function createNewFaker(v, i) {
+function createNewFaker(v, i) {
     return new FakeDataWithIndex(i);
 }
 

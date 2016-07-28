@@ -1,3 +1,7 @@
+/*
+*  List of pure functions helpers
+* */
+
 function increment(num) {
     return num + 1;
 }
