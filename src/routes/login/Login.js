@@ -14,7 +14,6 @@ import s from './Login.scss';
 import {connect} from 'react-redux';
 import {getCounter, dispatchActions} from '../../selectors/counter';
 
-
 class Login extends Component {
     static propTypes = {
         title: PropTypes.string.isRequired,

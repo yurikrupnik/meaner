@@ -19,13 +19,4 @@ class Payments extends ApiHelper {
     }
 }
 
-// const ss = new Payments();
-// ss.getCount().then((data) => {
-//     console.log('data', data);
-// });
-//
-// ss.getPayments().then(function (res) {
-//     console.log('res', res);
-//     return ss.getFirst(res);
-// });
 export default new Payments();

@@ -31,8 +31,10 @@
     "passport-facebook": "2.1.0",
     "pg": "4.5.1",
     "pretty-error": "2.0.0",
-    "react": "0.14.7",
-    "react-dom": "0.14.7",
+    "react": "^0.14.7",
+    "react-addons-test-utils": "^0.14.8",
+    "react-dom": "^0.14.7",
+    "react-dropzone": "^3.5.3",
     "react-redux": "^4.4.5",
     "react-routing": "0.0.7",
     "redux": "^3.5.2",
@@ -40,7 +42,7 @@
     "redux-promise": "^0.5.3",
     "redux-thunk": "^2.1.0",
     "source-map-support": "0.4.0",
-    "superagent": "^2.1.0",
+    "superagent": "^2.2.0",
     "whatwg-fetch": "0.11.0"
   },
   "devDependencies": {
