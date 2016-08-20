@@ -7,27 +7,32 @@
  * LICENSE.txt file in the root directory of this source tree.
  */
 
-import React, { PropTypes } from 'react';
+import React, {PropTypes} from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Home.scss';
+import AsyncApp from '../../components/ImageUploader/ImageUploader';
 
-function Home({ news }) {
-  return (
-    <div className={s.root}>
-      <div className={s.container}>
-        <h1 className={s.title}>React.js News</h1>
 
-      </div>
-    </div>
-  );
+function Home({news}) {
+    return (
+        <div className={s.root}>
+            <div className={s.container}>
+                <h1 className={s.title}>React.js News</h1>
+            </div>
+            <div>
+                <h5>Payments</h5>
+                <AsyncApp />
+            </div>
+        </div>
+    );
 }
 
 Home.propTypes = {
-  // news: PropTypes.arrayOf(PropTypes.shape({
-  //   title: PropTypes.string.isRequired,
-  //   link: PropTypes.string.isRequired,
-  //   contentSnippet: PropTypes.string,
-  // })).isRequired,
+    // news: PropTypes.arrayOf(PropTypes.shape({
+    //   title: PropTypes.string.isRequired,
+    //   link: PropTypes.string.isRequired,
+    //   contentSnippet: PropTypes.string,
+    // })).isRequired,
 };
 
 export default withStyles(Home, s);

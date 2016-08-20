@@ -11,14 +11,8 @@ import React, {Component, PropTypes} from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Login.scss';
 
-// calls
-
-
-import ImageUploader from '../../components/ImageUploader/ImageUploader';
-
 import {connect} from 'react-redux';
 import {getCounter, dispatchActions} from '../../selectors/counter';
-
 
 class Login extends Component {
     static propTypes = {
@@ -37,20 +31,10 @@ class Login extends Component {
         actions.minus();
     }
 
-    handleClick() {
-        const {loadPayments} = this.props.actions;
-        loadPayments();
-    }
-
     render() {
-
-        console.log('this.props', this.props);
-
-        const {loadPayments} = this.props.actions;
-
         return (
             <div className={s.root}>
-                <div className={s.container} onClick={this.handleClick.bind(this)}>
+                <div className={s.container}>
                     <h1>{this.props.title}</h1>
                     <h1>{this.props.counter}</h1>
                     <div>
@@ -58,7 +42,6 @@ class Login extends Component {
                         <button onClick={this.handleMinus.bind(this)}>-</button>
                     </div>
                 </div>
-                <ImageUploader/>
             </div>
         );
     }
