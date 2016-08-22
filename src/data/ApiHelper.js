@@ -1,12 +1,18 @@
-import Request from 'superagent';
-// var request = require('superagent');
+import request from 'superagent';
 
 export default class ApiHelper {
     constructor() {
-        this.request = Request;
+        this.request = request;
     }
 
-    getFirst(response) {
-        return head(response.body);
+    returnBody(res) {
+        return res.body;
     }
+
+    handleError(err) {
+        console.log('err', err);
+
+    }
+
+
 }

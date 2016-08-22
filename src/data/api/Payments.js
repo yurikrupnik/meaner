@@ -1,21 +1,26 @@
 import ApiHelper from '../ApiHelper';
 import {head} from 'lodash';
-
+const url = '/api/payments';
 
 class Payments extends ApiHelper {
     constructor() {
         super();
-        // this.request = request;
-        this.url = '/api/payments';
     }
 
     getPayments() {
-        return this.request.get(this.url)
-            .then(this.getFirst);
+        return this.request(url)
+            // .then((response) => { // for fetch(url)
+            //     console.log('data', response);
+            //     return response.json();
+            // })
+            .then(this.returnBody)
+            .catch(this.handleError);
     }
 
     getCount() {
-        return this.request.get(`${this.url}/count`);
+        return this.request.get(`${url}/count`)
+            .then(this.returnBody)
+            .catch(this.handleError);
     }
 }
 
